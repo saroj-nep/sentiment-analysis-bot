@@ -1,0 +1,180 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "VlabNr",
+    "name": "track_parcel",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "GEtGXC"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "LwV0QF"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_LwV0QF()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineSeparator": ", ",
+            "inlineOr": " or"
+          },
+          "property": "user.trackingchoice",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "eJXFle"
+          },
+          "condition": "user.trackingchoice",
+          "cases": [
+            {
+              "value": "Yes",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "b8K4Hl"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${TextInput_Prompt_b8K4Hl()}",
+                  "property": "user.trackingnumber"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "dMBc8a"
+                  },
+                  "condition": "user.trackingnumber=='123456'",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "EOBB1f"
+                      },
+                      "activity": "${SendActivity_EOBB1f()}"
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "zrjizn"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Farewell"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "2egBpb"
+                      },
+                      "activity": "${SendActivity_2egBpb()}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "No",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "0iDn0B"
+                  },
+                  "activity": "${SendActivity_0iDn0B()}"
+                },
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "zTeMck"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_zTeMck()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "property": "user.trackingnumberfound",
+                  "choices": [
+                    "Yes",
+                    "No"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "zQSPIU"
+                  },
+                  "condition": "user.trackingnumberfound",
+                  "cases": [
+                    {
+                      "value": "Yes",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperty",
+                          "$designer": {
+                            "id": "CguqPb"
+                          },
+                          "property": "user.trackingchoice",
+                          "value": "Yes"
+                        },
+                        {
+                          "$kind": "Microsoft.RepeatDialog",
+                          "$designer": {
+                            "id": "crDxLz"
+                          },
+                          "activityProcessed": true
+                        }
+                      ]
+                    },
+                    {
+                      "value": "No"
+                    }
+                  ],
+                  "default": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "track_parcel.lg",
+  "recognizer": "track_parcel.lu.qna",
+  "id": "track_parcel"
+}

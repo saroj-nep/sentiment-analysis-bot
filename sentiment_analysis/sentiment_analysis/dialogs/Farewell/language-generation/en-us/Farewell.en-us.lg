@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_N7PlCv()
+[Activity
+    Text = ${SendActivity_N7PlCv_text()}
+]
+
+# SendActivity_N7PlCv_text()
+- Bye!!!

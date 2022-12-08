@@ -1,0 +1,51 @@
+[import](common.lg)
+
+# Ask_Activity_O4b3VD()
+[Activity
+    Text = ${Ask_Activity_O4b3VD_text()}
+]
+
+# Ask_Activity_O4b3VD_text()
+- What is the tracking number of your parcel?
+# ChoiceInput_Prompt_LwV0QF()
+[Activity
+    Text = ${ChoiceInput_Prompt_LwV0QF_text()}
+]
+
+# ChoiceInput_Prompt_LwV0QF_text()
+- Let's find your parcel. Do you have the tracking number with you?
+# TextInput_Prompt_b8K4Hl()
+[Activity
+    Text = ${TextInput_Prompt_b8K4Hl_text()}
+]
+
+# TextInput_Prompt_b8K4Hl_text()
+- What is the tracking number of your parcel?
+# SendActivity_0iDn0B()
+[Activity
+    Text = ${SendActivity_0iDn0B_text()}
+]
+
+# SendActivity_0iDn0B_text()
+- You can find the tracking number on the parcel receipt in the upper right corner in the confirmation email.
+# SendActivity_EOBB1f()
+[Activity
+    Text = ${SendActivity_EOBB1f_text()}
+]
+
+# SendActivity_EOBB1f_text()
+- I found your parcel ${user.trackingnumber}. It's on the way to ...
+# SendActivity_2egBpb()
+[Activity
+    Text = ${SendActivity_2egBpb_text()}
+]
+
+# SendActivity_2egBpb_text()
+- I cannot find your parcel ${user.trackingnumber}. Please check the tracking number and try again.
+# ChoiceInput_Prompt_zTeMck()
+[Activity
+    Text = ${ChoiceInput_Prompt_zTeMck_text()}
+]
+
+# ChoiceInput_Prompt_zTeMck_text()
+- Did you find the tracking number?

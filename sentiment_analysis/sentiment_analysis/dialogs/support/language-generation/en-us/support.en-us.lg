@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_dibsTo()
+[Activity
+    Text = ${SendActivity_dibsTo_text()}
+]
+
+# SendActivity_dibsTo_text()
+- How can I help you today?
