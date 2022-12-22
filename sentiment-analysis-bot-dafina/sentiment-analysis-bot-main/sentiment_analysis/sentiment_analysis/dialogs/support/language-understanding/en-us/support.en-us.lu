@@ -1,0 +1,22 @@
+
+# TextInput_Response_HrIcRx
+> add some expected user responses:
+> - Please remind me to {itemTitle=buy milk}
+> - remind me to {itemTitle}
+> - add {itemTitle} to my todo list
+>
+> entity definitions:
+> @ ml itemTitle
+
+# TextInput_Response_u9HHQB
+
+>> Primary intents
+- \# CheckParcel
+- I cannot find my parcel
+- There is something wrong with the tracking number
+- Where is my parcel?
+
+- \# Greeting
+- Hi
+- Hello
+- Good afternoon

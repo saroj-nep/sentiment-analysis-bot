@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_sentiment_analysis",
+  "recognizers": {
+    "en-us": "sentiment_analysis.en-us.lu",
+    "": "sentiment_analysis.en-us.lu"
+  }
+}

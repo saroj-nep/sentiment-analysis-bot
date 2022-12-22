@@ -1,0 +1,54 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "h0yZGc",
+    "name": "Requests",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "z0ZUR9"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "blCn4e"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_blCn4e()}",
+          "property": "user.request"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "sKdKRg"
+          },
+          "activity": "${SendActivity_sKdKRg()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "JWlwhd"
+          },
+          "activity": "${SendActivity_JWlwhd()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Requests.lg",
+  "recognizer": "Requests.lu.qna",
+  "id": "Requests"
+}

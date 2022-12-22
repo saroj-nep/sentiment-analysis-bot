@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_dibsTo()
+[Activity
+    Text = ${SendActivity_dibsTo_text()}
+]
+
+# SendActivity_dibsTo_text()
+- Thank you!
+# ChoiceInput_Prompt_6LCiE2()
+[Activity
+    Text = ${ChoiceInput_Prompt_6LCiE2_text()}
+]
+
+# SendActivity_33CcvT()
+[Activity
+    Text = ${SendActivity_33CcvT_text()}
+]
+
+# SendActivity_ykd8K9()
+[Activity
+    Text = ${SendActivity_ykd8K9_text()}
+]
+
+# ChoiceInput_Prompt_6LCiE2_text()
+- Please pick the support method you want.
+# SendActivity_33CcvT_text()
+- Contact us with this phone number: +49 XXXXXXXX
+# SendActivity_ykd8K9_text()
+- Please contact us via: botservice@service.de
