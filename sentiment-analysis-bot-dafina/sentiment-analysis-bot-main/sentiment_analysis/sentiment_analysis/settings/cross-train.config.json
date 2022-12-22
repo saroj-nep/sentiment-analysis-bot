@@ -1,0 +1,11 @@
+{
+  "sentiment_analysis.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "track_parcel.en-us",
+        "support.en-us"
+      ]
+    }
+  }
+}

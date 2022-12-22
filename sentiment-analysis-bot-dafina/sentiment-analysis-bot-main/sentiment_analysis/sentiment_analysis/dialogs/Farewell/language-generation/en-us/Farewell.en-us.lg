@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_N7PlCv()
+[Activity
+    Text = ${SendActivity_N7PlCv_text()}
+]
+
+# SendActivity_N7PlCv_text()
+- I hope I was of help!
+# ChoiceInput_Prompt_WSfduw()
+[Activity
+    Text = ${ChoiceInput_Prompt_WSfduw_text()}
+]
+
+# ChoiceInput_Prompt_WSfduw_text()
+- Do you have any other request?
+# SendActivity_XrjE7I()
+[Activity
+    Text = ${SendActivity_XrjE7I_text()}
+]
+
+# SendActivity_XrjE7I_text()
+- Thank You!
