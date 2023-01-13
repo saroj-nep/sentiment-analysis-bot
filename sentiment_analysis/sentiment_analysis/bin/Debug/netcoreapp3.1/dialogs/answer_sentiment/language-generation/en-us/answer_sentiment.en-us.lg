@@ -1,0 +1,41 @@
+[import](common.lg)
+
+# SendActivity_G9pDj8()
+[Activity
+    Text = ${SendActivity_G9pDj8_text()}
+]
+
+# SendActivity_G9pDj8_text()
+- Thank you for your cooperation!
+# SendActivity_JZj4rs()
+[Activity
+    Text = ${SendActivity_JZj4rs_text()}
+]
+
+# SendActivity_JZj4rs_text()
+- Sorry about that.
+- My apologies for this.
+- I owe you an apology.
+- I truly regret
+- I really regret
+- I sincerely apologize
+- Please accept our apologies.
+# SendActivity_ha6VH6()
+[Activity
+    Text = ${SendActivity_ha6VH6_text()}
+]
+
+# SendActivity_ha6VH6_text()
+- Cool!
+- I'm glad to read that!
+- I'm glad that you are so happy!
+- Perfect)
+# SendActivity_lr5qqO()
+[Activity
+    Text = ${SendActivity_lr5qqO_text()}
+]
+
+# SendActivity_lr5qqO_text()
+- Thank you for contacting
+- Thanks for the question
+- I got you

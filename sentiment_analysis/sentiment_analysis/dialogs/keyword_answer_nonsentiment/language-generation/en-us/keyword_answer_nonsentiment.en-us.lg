@@ -1,0 +1,104 @@
+[import](common.lg)
+
+# SendActivity_XFJfbz()
+[Activity
+    Text = ${SendActivity_XFJfbz_text()}
+]
+
+# SendActivity_XFJfbz_text()
+- ```If you want to send a parcel, you need to select a convenient shipping method, fill in an electronic shipment form and pay for the delivery online. Then our courier will come to you and pick up the parcel. 
+We don't have physical offices, so you won't be able to come and do everything "on place"```
+# SendActivity_noIzbE()
+[Activity
+    Text = ${SendActivity_noIzbE_text()}
+]
+
+# SendActivity_noIzbE_text()
+- ```The delivery price depends on the selected shipping method, country of delivery, as well as the weight and dimensions of the package. The exact price of a service can be found by using the delivery cost calculator available on our website on the price list. 
+It is quite detailed and we constantly control the prices indicated on our website.```
+# SendActivity_tGobMC()
+[Activity
+    Text = ${SendActivity_tGobMC_text()}
+]
+
+# SendActivity_tGobMC_text()
+- ```We offer various online payment methods. You can pay postage using fast transfer systems such as PayU or Klarna, a online pazment methods such as Paypal, Google Pay, ApplePay, a payment card or traditional transfer.  
+You will see the option to pay after you fill out an electronic shipment form. 
+If you failed to pay in one way, then you can choose other payment methods.```
+# SendActivity_cvp2FV()
+[Activity
+    Text = ${SendActivity_cvp2FV_text()}
+]
+
+# SendActivity_cvp2FV_text()
+- We deliver parcels to all towns/cities, including the smallest ones. 
+# SendActivity_J4YH8Q()
+[Activity
+    Text = ${SendActivity_J4YH8Q_text()}
+]
+
+# SendActivity_J4YH8Q_text()
+- ```If you’re sending a package within the European Union, you need only describe the contents of the parcel in general terms.
+For packages leaving the EU customs area, a more detailed declaration of the contents is required – a so\-called customs declaration.
+In the customs declaration, specify the category of the goods which best describes the contents of your package (e.g. sweets, clothes, cosmetics) and specify their value and weight. If you’re sending goods of various categories in one package, describe them under individual headings.```
+# SendActivity_rj09g5()
+[Activity
+    Text = ${SendActivity_rj09g5_text()}
+]
+
+# SendActivity_rj09g5_text()
+- ```The time of delivery depends on the country of dispatch and the country of delivery. 
+For deliveries within the European Union, the estimated time of delivery is 2–5 business days. 
+Parcels sent to cities not in European Union are delivered to recipients within 8\-14 business days, and delivery times are also dependent on the operations of the customs offices. The estimated time of delivery is presented on our website when selecting shipment and delivery options.
+We also offer you the opportunity to track the current location of the parcel. If your package is already in your country but has not yet been delivered to you \- please contact your local postal services.```
+# SendActivity_aeonuy()
+[Activity
+    Text = ${SendActivity_aeonuy_text()}
+]
+
+# SendActivity_aeonuy_text()
+- ```If your parcel shipment has not yet been delivered, we recommend that you first check the status of your parcel online.
+In some cases, the status of your parcel may not change for several days. Usually, the parcel has been taken out of the fully automated process at the parcel centre. This can happen for a number of reasons. Here are some reasons that the delivery of your parcel might be delayed:
+\-The address on the shipment is faulty or incomplete (e.g. a transposed postal code or a missing house number).
+\-The shipping label was completed in illegible handwriting.
+\-The shipping label has fallen off the shipment.
+\-The packaging around the shipment has opened during transport or has been slightly damaged externally and needs to be repackaged.
+```
+# SendActivity_QJ50yj()
+[Activity
+    Text = ${SendActivity_QJ50yj_text()}
+]
+
+# SendActivity_QJ50yj_text()
+- ```You cannot change any information after your parcel has beed dispached. 
+If the deliverer cannot find the recipient at the specified recipient address, the parcel will be returned to the sender.```
+# SendActivity_lv9xAU()
+[Activity
+    Text = ${SendActivity_lv9xAU_text()}
+]
+
+# SendActivity_lv9xAU_text()
+- ```We hand over parcels only to the recipient after the signature. We will notify you in advance of the estimated delivery time.
+If you are not at home on the day of delivery, please let us know.
+If we arrive, and you do not have the opportunity to collect the parcel, then we will try to arrive the next day. After three attempts, we will send your parcel back to the sender.```
+# SendActivity_AtO4sL()
+[Activity
+    Text = ${SendActivity_AtO4sL_text()}
+]
+
+# SendActivity_AtO4sL_text()
+- Looks like your problem is more serious than we expected. Please contact our manager and we will definitely solve your problem. 
+# SendActivity_u3nRtD()
+[Activity
+    Text = ${SendActivity_u3nRtD_text()}
+]
+
+# SendActivity_u3nRtD_text()
+- The possible sizes and weight of parcels are indicated on our website.
+# TextInput_Prompt_YtO1E0()
+[Activity
+    Text = ${TextInput_Prompt_YtO1E0_text()}
+]
+
+# TextInput_Prompt_YtO1E0_text()
+- Please tell us your request.

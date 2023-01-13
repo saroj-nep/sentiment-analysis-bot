@@ -1,5 +1,8 @@
 {
   "$kind": "Microsoft.MultiLanguageRecognizer",
   "id": "LUIS_Farewell",
-  "recognizers": {}
+  "recognizers": {
+    "en-us": "Farewell.en-us.lu",
+    "": "Farewell.en-us.lu"
+  }
 }

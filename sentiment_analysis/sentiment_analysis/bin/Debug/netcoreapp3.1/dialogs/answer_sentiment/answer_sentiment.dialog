@@ -1,0 +1,166 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "edkHvv",
+    "name": "answer_sentiment",
+    "comment": "Sentiment reactions"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "oyy4ke"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "hOt8mh"
+          },
+          "property": "user.sentkeywordspos",
+          "value": "[\"fast\", \"received\", \"happy\", \"amazed\", \"satisfied\"]"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "KGPoqg"
+          },
+          "property": "user.sentkeywordsneg",
+          "value": "[\"weeks\", \"months\", \"month\", \"late\", \"lost\", \"wrong\", \"damaged\", \"not received it\", \"slow\", \"not find\", \"cannot find\", \"don’t find\", \"can’t find\", \"bad\", \"sad\", \"nervous\", \"angry\", \"disappointed\"]"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "HREQP3"
+          },
+          "property": "this.uinput",
+          "value": "=concat(intersection(split(text, \" \"),user.sentkeywordspos),intersection(split(text, \" \"),user.sentkeywordsneg))"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "6UElJU"
+          },
+          "property": "this.keywordnumber",
+          "value": 0
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "yjLcG9"
+          },
+          "property": "this.uinput.index",
+          "value": 0
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "CcVN2k"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "F0GiQ1"
+              },
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "nF6MDB"
+                  },
+                  "property": "this.keywordnumber",
+                  "value": "=add(this.keywordnumber, 1)"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "hidMLC"
+                  },
+                  "property": "this.keywordnumber",
+                  "value": "=add(this.keywordnumber, -1)"
+                }
+              ],
+              "condition": "=contains(user.sentkeywordspos, this.uinput.index)"
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "RUXIOf"
+              },
+              "property": "this.uinput.index",
+              "value": "=add(this.uinput.index, +1)"
+            }
+          ],
+          "itemsProperty": "this.uinput"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "UKTC1P",
+            "comment": "for Azure tool:\nfrom 0 till 0,35 - negative\nfrom 0.36 till 0.69 - neutral\nfrom 0.71 till 1 - posititve\n\nother case: use keywords"
+          },
+          "cases": [
+            {
+              "value": "negative",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "JZj4rs"
+                  },
+                  "activity": "${SendActivity_JZj4rs()}"
+                }
+              ]
+            },
+            {
+              "value": "neutral",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "lr5qqO"
+                  },
+                  "activity": "${SendActivity_lr5qqO()}"
+                }
+              ]
+            },
+            {
+              "value": "positive",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "ha6VH6"
+                  },
+                  "activity": "${SendActivity_ha6VH6()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "G9pDj8"
+              },
+              "activity": "${SendActivity_G9pDj8()}"
+            }
+          ],
+          "condition": "if (lessOrEquals(this.keywordnumber,-2),\"negative\", if (greaterOrEquals(this.keywordnumber,2), \"positive\",  if (and(less(this.keywordnumber,2),greater(this.keywordnumber,-2)) \"neutral\", \"default\")))"
+        }
+      ]
+    }
+  ],
+  "generator": "answer_sentiment.lg",
+  "recognizer": "answer_sentiment.lu.qna",
+  "id": "answer_sentiment"
+}

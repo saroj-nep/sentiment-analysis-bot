@@ -1,0 +1,187 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "wJZ5VF",
+    "name": "keyword_answer_nonsentiment",
+    "comment": "Searching for keywords in user input to create a non-sentiment answer\n"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "U6ESTy"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "GpgCBp",
+            "comment": "Keywords for each value:\nsend:send;\ncostsend:cost, price, send;\npay:pay;\nplacesend:city, cities town, towns, send;\ndeclare:declare, declaring;\ntime:how long, time;\nnot delivered: not delivered, don't deliver;\nchange:change, name,number;\nreceive:receive, receiving;\nsize:size, weight;\ndefault: \"other cases\""
+          },
+          "condition": "if(contains(user.request, \"send\"), \"send\",  if(and(contains(user.request, \"send\"), or(contains(user.request, \"cost\"), contains(user.request, \"price\"))), \"costsend\",   if(contains(user.request, \"pay\"), \"pay\",   if(and(contains(user.request, \"send\"), or(contains(user.request, \"towns\"),contains(user.request, \"cities\"), contains(user.request, \"town\"),contains(user.request, \"city\"))), \"placesend\",   if(or(contains(user.request, \"declare\"),contains(user.request, \"declaring\")), \"declare\",  if(or(contains(user.request, \"time\"),and(contains(user.request, \"long\"),contains(user.request, \"how\"))), \"time\",  if(or(and(contains(user.request, \"not\"), contains(user.request, \"delivered\")),and(contains(user.request, \"don't\"), contains(user.request, \"deliver\"))), \"notdelivered\", if(and(contains(user.request, \"change\"), or(contains(user.request, \"name\"),contains(user.request, \"number\"))), \"change\",  if(or(contains(user.request, \"size\"),contains(user.request, \"weight \")), \"size\", if(or(contains(user.request, \"receive\"),contains(user.request, \"receiving\")), \"receive\", \"default\"))))))))))",
+          "cases": [
+            {
+              "value": "send",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "XFJfbz"
+                  },
+                  "activity": "${SendActivity_XFJfbz()}"
+                }
+              ]
+            },
+            {
+              "value": "costsend",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "noIzbE"
+                  },
+                  "activity": "${SendActivity_noIzbE()}"
+                }
+              ]
+            },
+            {
+              "value": "pay",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "tGobMC"
+                  },
+                  "activity": "${SendActivity_tGobMC()}"
+                }
+              ]
+            },
+            {
+              "value": "placesend",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "cvp2FV"
+                  },
+                  "activity": "${SendActivity_cvp2FV()}"
+                }
+              ]
+            },
+            {
+              "value": "declare",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "J4YH8Q"
+                  },
+                  "activity": "${SendActivity_J4YH8Q()}"
+                }
+              ]
+            },
+            {
+              "value": "time",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "rj09g5"
+                  },
+                  "activity": "${SendActivity_rj09g5()}"
+                }
+              ]
+            },
+            {
+              "value": "notdelivered",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "aeonuy"
+                  },
+                  "activity": "${SendActivity_aeonuy()}"
+                }
+              ]
+            },
+            {
+              "value": "change",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "QJ50yj"
+                  },
+                  "activity": "${SendActivity_QJ50yj()}"
+                }
+              ]
+            },
+            {
+              "value": "receive",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "lv9xAU"
+                  },
+                  "activity": "${SendActivity_lv9xAU()}"
+                }
+              ]
+            },
+            {
+              "value": "size",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "u3nRtD"
+                  },
+                  "activity": "${SendActivity_u3nRtD()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "AtO4sL"
+              },
+              "activity": "${SendActivity_AtO4sL()}"
+            },
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "FHrraY"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": ""
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "kAOEod"
+              },
+              "activityProcessed": true,
+              "dialog": "support"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "knonset2.lg",
+  "recognizer": "knonset2.lu.qna",
+  "id": "keyword_answer_nonsentiment"
+}

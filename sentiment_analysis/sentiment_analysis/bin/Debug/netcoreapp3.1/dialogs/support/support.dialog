@@ -17,11 +17,173 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "6LCiE2"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${ChoiceInput_Prompt_6LCiE2()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "validations": [],
+          "property": "$support",
+          "choices": [
+            {
+              "value": "Call",
+              "synonyms": [
+                "Phone",
+                "CALL",
+                "call",
+                "phone",
+                "telephone",
+                "Telephone",
+                "tele",
+                "Tele",
+                "TELE",
+                "PHONE",
+                "talk",
+                "TALK",
+                "SPEAK",
+                "speak"
+              ]
+            },
+            {
+              "value": "Email",
+              "synonyms": [
+                "email",
+                "write",
+                "EMAIL",
+                "WRITE",
+                "COMPLAIN",
+                "complain",
+                "mail",
+                "e-mail",
+                "E-MAIL",
+                "E-mail",
+                "MAIL"
+              ]
+            },
+            {
+              "value": "Try again",
+              "synonyms": [
+                "try",
+                "TRY",
+                "again",
+                "AGAIN",
+                "Try AGAIN",
+                "try again",
+                "begin",
+                "Begin",
+                "BEGIN",
+                "beginning",
+                "Beginning",
+                "BEGINNING",
+                "START,start,Start",
+                "Resume",
+                "resume",
+                "RESUME",
+                "Track",
+                "track",
+                "TRACK"
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "JjQMgm"
+          },
+          "condition": "$support",
+          "cases": [
+            {
+              "value": "Call",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "33CcvT"
+                  },
+                  "activity": "${SendActivity_33CcvT()}"
+                }
+              ]
+            },
+            {
+              "value": "Email",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "ykd8K9"
+                  },
+                  "activity": "${SendActivity_ykd8K9()}"
+                }
+              ]
+            },
+            {
+              "value": "Try again",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ReplaceDialog",
+                  "$designer": {
+                    "id": "mseQvx"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "sentiment_analysis"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "mZlBeV"
+                  },
+                  "activity": "${SendActivity_mZlBeV()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "IUSkyY"
+              },
+              "activity": "${SendActivity_IUSkyY()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0TJoMI"
+          },
+          "activity": "${SendActivity_0TJoMI()}"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "dibsTo"
           },
           "activity": "${SendActivity_dibsTo()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "6d743b"
+          }
         }
       ]
     }

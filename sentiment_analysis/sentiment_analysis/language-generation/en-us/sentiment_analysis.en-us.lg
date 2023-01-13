@@ -7,13 +7,6 @@
 
 # SendActivity_Greeting_text()
 - Hello!  Welcome to "ParcelCheck"  :)
-# SendActivity_DidNotUnderstand()
-[Activity
-    Text = ${SendActivity_DidNotUnderstand_text()}
-]
-
-# SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
 # ChoiceInput_Prompt_2ICIpi()
 [Activity
     Text = ${ChoiceInput_Prompt_2ICIpi_text()}
@@ -21,3 +14,10 @@
 
 # ChoiceInput_Prompt_2ICIpi_text()
 - What would you like to do today?
+# SendActivity_EQmhgv()
+[Activity
+    Text = ${SendActivity_EQmhgv_text()}
+]
+
+# SendActivity_EQmhgv_text()
+- Sorry ! I was not able to understand your request. Let me forward you to our support team.

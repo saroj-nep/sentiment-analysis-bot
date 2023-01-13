@@ -1,4 +1,12 @@
 {
+  "Farewell.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "keyword_answer_nonsentiment.en-us"
+      ]
+    }
+  },
   "sentiment_analysis.en-us": {
     "rootDialog": true,
     "triggers": {

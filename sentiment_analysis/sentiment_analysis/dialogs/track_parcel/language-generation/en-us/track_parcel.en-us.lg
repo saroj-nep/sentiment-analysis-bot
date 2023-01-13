@@ -28,20 +28,6 @@
 
 # SendActivity_0iDn0B_text()
 - You can find the tracking number on the parcel receipt in the upper right corner in the confirmation email.
-# SendActivity_EOBB1f()
-[Activity
-    Text = ${SendActivity_EOBB1f_text()}
-]
-
-# SendActivity_EOBB1f_text()
-- I found your parcel ${user.trackingnumber}. It's on the way to ...
-# SendActivity_2egBpb()
-[Activity
-    Text = ${SendActivity_2egBpb_text()}
-]
-
-# SendActivity_2egBpb_text()
-- I cannot find your parcel ${user.trackingnumber}. Please check the tracking number and try again.
 # ChoiceInput_Prompt_zTeMck()
 [Activity
     Text = ${ChoiceInput_Prompt_zTeMck_text()}
@@ -49,3 +35,62 @@
 
 # ChoiceInput_Prompt_zTeMck_text()
 - Did you find the tracking number?
+# SendActivity_XLwOxn()
+[Activity
+    Text = ${SendActivity_XLwOxn_text()}
+]
+
+# SendActivity_XLwOxn_text()
+- Please let me connect you with the support team.
+# SendActivity_tfuKrB()
+[Activity
+    Text = ${SendActivity_tfuKrB_text()}
+]
+
+# SendActivity_tfuKrB_text()
+- I cannot find your parcel ${user.trackingnumber}.
+# TextInput_Prompt_D7GU9g()
+[Activity
+    Text = ${TextInput_Prompt_D7GU9g_text()}
+]
+
+# TextInput_Prompt_D7GU9g_text()
+- try again
+# TextInput_Prompt_cTpDdO()
+[Activity
+    Text = ${TextInput_Prompt_cTpDdO_text()}
+]
+
+# TextInput_Prompt_cTpDdO_text()
+- I found your parcel ${user.trackingnumber}. It's on the way to your house.
+- Your parcel ${user.trackingnumber} it's still on our warehouse.
+# SendActivity_d8eRZw()
+[Activity
+    Text = ${SendActivity_d8eRZw_text()}
+]
+
+# SendActivity_d8eRZw_text()
+- Sorry ! I was not able to understand your request. I am forwarding you to our support team. 
+# SendActivity_wYMXyC()
+[Activity
+    Text = ${SendActivity_wYMXyC_text()}
+]
+
+# SendActivity_wYMXyC_text()
+- I found your parcel ${user.trackingnumber}. It's on the way to your house.
+- Your parcel ${user.trackingnumber} it's still on our warehouse.
+- Unfortunately the sending company damaged your package, so the parcel will come after a week.
+# ChoiceInput_Prompt_3YT7pw()
+[Activity
+    Text = ${ChoiceInput_Prompt_3YT7pw_text()}
+]
+
+# ChoiceInput_Prompt_3YT7pw_text()
+- Do you have any further question about your parcel?
+# TextInput_Prompt_Hp7YI7()
+[Activity
+    Text = ${TextInput_Prompt_Hp7YI7_text()}
+]
+
+# TextInput_Prompt_Hp7YI7_text()
+- Please write down your question about the parcel.

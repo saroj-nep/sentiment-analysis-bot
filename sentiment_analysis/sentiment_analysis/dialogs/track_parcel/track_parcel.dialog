@@ -23,13 +23,12 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
+          "maxTurnCount": 2,
           "alwaysPrompt": false,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_LwV0QF()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -38,9 +37,42 @@
           },
           "property": "user.trackingchoice",
           "choices": [
-            "Yes",
-            "No"
-          ]
+            {
+              "value": "Yes",
+              "synonyms": [
+                "yes",
+                "YES",
+                "yEs",
+                "yES",
+                "YEs",
+                "yeah",
+                "YEAH",
+                "of course",
+                "Of course",
+                "OF COURSE",
+                "you bet",
+                "You bet",
+                "No kidding",
+                "no kidding"
+              ]
+            },
+            {
+              "value": "No",
+              "synonyms": [
+                "NO",
+                "no",
+                "sorry",
+                "cannot",
+                "where",
+                "Sorry",
+                "Cannot",
+                "Where"
+              ]
+            }
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -76,26 +108,193 @@
                     {
                       "$kind": "Microsoft.SendActivity",
                       "$designer": {
-                        "id": "EOBB1f"
+                        "id": "wYMXyC"
                       },
-                      "activity": "${SendActivity_EOBB1f()}"
+                      "activity": "${SendActivity_wYMXyC()}"
                     },
                     {
-                      "$kind": "Microsoft.BeginDialog",
+                      "$kind": "Microsoft.ChoiceInput",
                       "$designer": {
-                        "id": "zrjizn"
+                        "id": "3YT7pw"
                       },
-                      "activityProcessed": true,
-                      "dialog": "Farewell"
+                      "defaultLocale": "en-us",
+                      "disabled": false,
+                      "maxTurnCount": 3,
+                      "alwaysPrompt": false,
+                      "allowInterruptions": false,
+                      "prompt": "${ChoiceInput_Prompt_3YT7pw()}",
+                      "unrecognizedPrompt": "",
+                      "invalidPrompt": "",
+                      "defaultValueResponse": "",
+                      "choiceOptions": {
+                        "includeNumbers": true,
+                        "inlineOrMore": ", or ",
+                        "inlineOr": " or ",
+                        "inlineSeparator": ", "
+                      },
+                      "choices": [
+                        {
+                          "value": "Yes",
+                          "synonyms": [
+                            "yes",
+                            "yeah",
+                            "Yeah",
+                            "YES",
+                            "YEAH",
+                            "I have",
+                            "HAVE",
+                            "Have"
+                          ]
+                        },
+                        {
+                          "value": "No",
+                          "synonyms": [
+                            "NO",
+                            "no",
+                            "don't ",
+                            "do not",
+                            "Don't DON'T",
+                            "DO NOT"
+                          ]
+                        }
+                      ],
+                      "property": "user.furtherquestion"
+                    },
+                    {
+                      "$kind": "Microsoft.SwitchCondition",
+                      "$designer": {
+                        "id": "wgT5jL"
+                      },
+                      "cases": [
+                        {
+                          "value": "Yes",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.TextInput",
+                              "$designer": {
+                                "id": "Hp7YI7"
+                              },
+                              "disabled": false,
+                              "maxTurnCount": 3,
+                              "alwaysPrompt": false,
+                              "allowInterruptions": false,
+                              "prompt": "${TextInput_Prompt_Hp7YI7()}",
+                              "unrecognizedPrompt": "",
+                              "invalidPrompt": "",
+                              "defaultValueResponse": "",
+                              "property": "user.request"
+                            },
+                            {
+                              "$kind": "Microsoft.BeginDialog",
+                              "$designer": {
+                                "id": "fOMSuU"
+                              },
+                              "activityProcessed": true,
+                              "dialog": "knonset2"
+                            }
+                          ]
+                        },
+                        {
+                          "value": "No",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.BeginDialog",
+                              "$designer": {
+                                "id": "byQOzt"
+                              },
+                              "activityProcessed": true,
+                              "dialog": "Farewell"
+                            },
+                            {
+                              "$kind": "Microsoft.EndDialog",
+                              "$designer": {
+                                "id": "jKtCNB"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "condition": "user.furtherquestion"
                     }
                   ],
                   "elseActions": [
                     {
                       "$kind": "Microsoft.SendActivity",
                       "$designer": {
-                        "id": "2egBpb"
+                        "id": "tfuKrB"
                       },
-                      "activity": "${SendActivity_2egBpb()}"
+                      "activity": "${SendActivity_tfuKrB()}"
+                    },
+                    {
+                      "$kind": "Microsoft.DeleteProperty",
+                      "$designer": {
+                        "id": "hOX3MV"
+                      },
+                      "property": "user.trackingnumber"
+                    },
+                    {
+                      "$kind": "Microsoft.TextInput",
+                      "$designer": {
+                        "id": "D7GU9g"
+                      },
+                      "disabled": false,
+                      "maxTurnCount": 2,
+                      "alwaysPrompt": false,
+                      "allowInterruptions": false,
+                      "prompt": "${TextInput_Prompt_D7GU9g()}",
+                      "unrecognizedPrompt": "",
+                      "invalidPrompt": "",
+                      "property": "user.trackingnumber"
+                    },
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "0LdMWZ"
+                      },
+                      "condition": "user.trackingnumber=='123456'",
+                      "elseActions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "mp0GVC"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "support"
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.TextInput",
+                          "$designer": {
+                            "id": "cTpDdO"
+                          },
+                          "disabled": false,
+                          "maxTurnCount": 3,
+                          "alwaysPrompt": false,
+                          "allowInterruptions": false,
+                          "unrecognizedPrompt": "",
+                          "invalidPrompt": "",
+                          "defaultValueResponse": "",
+                          "prompt": "${TextInput_Prompt_cTpDdO()}",
+                          "property": "user.request"
+                        },
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "NC4ktf"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "knonset2"
+                        },
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "vb4YFw"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "Farewell"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -126,7 +325,8 @@
                   "invalidPrompt": "",
                   "defaultValueResponse": "",
                   "choiceOptions": {
-                    "includeNumbers": true
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
                   },
                   "property": "user.trackingnumberfound",
                   "choices": [
@@ -162,14 +362,47 @@
                       ]
                     },
                     {
-                      "value": "No"
+                      "value": "No",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "XLwOxn"
+                          },
+                          "activity": "${SendActivity_XLwOxn()}"
+                        },
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "qumMDj"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "support"
+                        }
+                      ]
                     }
                   ],
                   "default": []
                 }
               ]
             }
-          ]
+          ],
+          "default": []
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "d8eRZw"
+          },
+          "activity": "${SendActivity_d8eRZw()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "sNYzbE"
+          },
+          "activityProcessed": true,
+          "dialog": "support"
         }
       ]
     }

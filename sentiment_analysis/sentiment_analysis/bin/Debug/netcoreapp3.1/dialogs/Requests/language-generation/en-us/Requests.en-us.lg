@@ -1,0 +1,24 @@
+[import](common.lg)
+
+# TextInput_Prompt_blCn4e()
+[Activity
+    Text = ${TextInput_Prompt_blCn4e_text()}
+]
+
+# TextInput_Prompt_blCn4e_text()
+- Please tell us the request that you have.
+# SendActivity_tU844I()
+[Activity
+    Text = ${SendActivity_tU844I_text()}
+]
+
+# SendActivity_tU844I_text()
+- Do you have other request?
+# SendActivity_0jgJBa()
+[Activity
+    Text = ${SendActivity_0jgJBa_text()}
+]
+
+# SendActivity_0jgJBa_text()
+- Thank you for contacting us!
+- Wish you a good day!

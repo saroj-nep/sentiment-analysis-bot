@@ -1,9 +1,30 @@
 [import](common.lg)
 
-# SendActivity_N7PlCv()
+# ChoiceInput_Prompt_WSfduw()
 [Activity
-    Text = ${SendActivity_N7PlCv_text()}
+    Text = ${ChoiceInput_Prompt_WSfduw_text()}
 ]
 
-# SendActivity_N7PlCv_text()
-- Bye!!!
+# ChoiceInput_Prompt_WSfduw_text()
+- Do you have any other questions or requests?
+# SendActivity_XrjE7I()
+[Activity
+    Text = ${SendActivity_XrjE7I_text()}
+]
+
+# SendActivity_XrjE7I_text()
+- Thank You! 
+# TextInput_Prompt_kM2IC0()
+[Activity
+    Text = ${TextInput_Prompt_kM2IC0_text()}
+]
+
+# TextInput_Prompt_kM2IC0_text()
+- Please write down your question/ request.
+# SendActivity_B9oFTD()
+[Activity
+    Text = ${SendActivity_B9oFTD_text()}
+]
+
+# SendActivity_B9oFTD_text()
+- This is the end of our conversation. Hope I was of help. Goodbye!
