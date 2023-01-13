@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj": {}
+    "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj": {
+    "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj",
+        "projectUniqueName": "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj",
         "projectName": "sentiment_analysis",
-        "projectPath": "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj",
+        "projectPath": "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\sentiment_analysis.csproj",
         "packagesPath": "C:\\Users\\Saroj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\obj\\",
+        "outputPath": "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Saroj\\Desktop\\sentiment_analysis\\sentiment_analysis\\NuGet.Config",
+          "C:\\Users\\Saroj\\Documents\\GitHub\\sentiment-analysis-bot\\sentiment_analysis\\sentiment_analysis\\NuGet.Config",
           "C:\\Users\\Saroj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [

@@ -48,16 +48,12 @@
                   },
                   "defaultLocale": "en-us",
                   "disabled": false,
-                  "maxTurnCount": 3,
+                  "maxTurnCount": 2,
                   "alwaysPrompt": false,
                   "allowInterruptions": false,
                   "unrecognizedPrompt": "",
                   "invalidPrompt": "",
                   "prompt": "${ChoiceInput_Prompt_2ICIpi()}",
-                  "choices": [
-                    "Track a Parcel",
-                    "Contact Support"
-                  ],
                   "recognizerOptions": {
                     "recognizeOrdinals": true,
                     "recognizeNumbers": true
@@ -68,12 +64,42 @@
                     "inlineOrMore": ", or ",
                     "inlineOr": " or ",
                     "inlineSeparator": ", "
-                  }
+                  },
+                  "choices": [
+                    {
+                      "value": "Track a Parcel",
+                      "synonyms": [
+                        "track",
+                        "Track",
+                        "Parcel",
+                        "parcel",
+                        "track parcel",
+                        "Track Parcel",
+                        "TRACK parcel",
+                        "TRACK PARCEL",
+                        "track PARCEL"
+                      ]
+                    },
+                    {
+                      "value": "Contact Support",
+                      "synonyms": [
+                        "Contact",
+                        "contact",
+                        "Support",
+                        "support",
+                        "CONTACT SUPPORT",
+                        "contact support",
+                        "CONTACT support",
+                        "contact SUPPORT"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "$kind": "Microsoft.SwitchCondition",
                   "$designer": {
-                    "id": "JOj72n"
+                    "id": "JOj72n",
+                    "comment": ""
                   },
                   "condition": "$userchoice",
                   "cases": [
@@ -83,11 +109,10 @@
                         {
                           "$kind": "Microsoft.BeginDialog",
                           "$designer": {
-                            "id": "EpMjFo"
+                            "id": "9quqMX"
                           },
                           "activityProcessed": true,
-                          "dialog": "track_parcel",
-                          "options": {}
+                          "dialog": "track_parcel"
                         }
                       ]
                     },
@@ -97,37 +122,36 @@
                         {
                           "$kind": "Microsoft.BeginDialog",
                           "$designer": {
-                            "id": "uzQ8ca"
+                            "id": "Xqf5T3"
                           },
                           "activityProcessed": true,
                           "dialog": "support"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "default": []
                 }
               ]
             }
           ],
           "value": "dialog.foreach.value",
           "index": "dialog.foreach.index"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnUnknownIntent",
-      "$designer": {
-        "id": "mb2n1u",
-        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
-      },
-      "actions": [
+        },
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "kMjqz1",
-            "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
+            "id": "EQmhgv"
           },
-          "activity": "${SendActivity_DidNotUnderstand()}"
+          "activity": "${SendActivity_EQmhgv()}"
+        },
+        {
+          "$kind": "Microsoft.ReplaceDialog",
+          "$designer": {
+            "id": "N9AsC3"
+          },
+          "activityProcessed": true,
+          "dialog": "support"
         }
       ]
     }

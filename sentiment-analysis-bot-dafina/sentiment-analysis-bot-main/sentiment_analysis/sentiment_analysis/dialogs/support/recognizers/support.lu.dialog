@@ -1,8 +1,0 @@
-{
-  "$kind": "Microsoft.MultiLanguageRecognizer",
-  "id": "LUIS_support",
-  "recognizers": {
-    "en-us": "support.en-us.lu",
-    "": "support.en-us.lu"
-  }
-}

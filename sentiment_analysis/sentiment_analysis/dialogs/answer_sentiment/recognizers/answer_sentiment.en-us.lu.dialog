@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_answer_sentiment",
+  "applicationId": "=settings.luis.answer_sentiment_en_us_lu.appId",
+  "version": "=settings.luis.answer_sentiment_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}
